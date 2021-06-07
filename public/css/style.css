@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.clr a{
+    color: white;
+}
+
+.main_header{
+    width: 100%;
+    height: 450px;
+}
+
+.rotation img{
+    animation: corona 4s linear infinite;
+}
+@keyframes corona{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.sub_section{
+    background-color: #fbfafd;
+}
+
+.carousel-item{
+    height: 20rem;
+}

@@ -1,0 +1,300 @@
+<%- include('partials/header') %>
+
+<nav class="navbar navbar-expand-lg bg-info clr p-2">
+  <a class="navbar-brand pl-5" href="#"> <span navbar-brand pl-4><img src="/images/logo.png" alt="no" width="50" height="50"></span> Tracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto pr-5">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutid">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#graphid">Graphs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#symptomsid">Symptoms</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#preventid">Preventions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contactid">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="main_header">
+  <div class="row w-100 h-100">
+    <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+      <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center">
+        <img src="/images/covidpic.png" alt="Not found" width="300" height="300">
+      </div>
+    </div>
+  <div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1">
+    <div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+      <h1>Let's Stay Safe and Fight Together Against Cor<span class="rotation"><img src="/images/p3.png" alt="No" width="80" height="80"></span>na Virus</h1>
+    </div>
+  </div>
+  </div>
+</div>
+
+  <div class="text-center jumbotron">
+    <h1>COVID-19 Numerical Updates</h1>
+    <p>Overall cases in India is displayed </p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 text-warning text-center">
+        <h5>Confirmed</h5>
+        <p id="confirmed"></p>
+      </div>
+      <div class="col-lg-3 text-info text-center">
+        <h5>Active</h5>
+        <p id="active"></p>
+      </div>
+      <div class="col-lg-3 text-success text-center">
+        <h5>Recovered</h5>
+        <p id="recovered"></p>
+      </div>
+      <div class="col-lg-3 text-danger text-center">
+        <h5>Death</h5>
+        <p id="death"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid sub_section pt-5 pb-1" id="aboutid">
+    <div class="section_header text-center mb-5 mt-4">
+      <h1>About COVID - 19</h1>
+    </div> 
+  <div class="row pt-5 pb-5">
+    <div class="col-lg-5 col-md-6 col-12 ml-5">
+      <img src="/images/p4.png" alt="No" width="350" height="300">
+    </div>
+    <div class="col-lg-6 col-md-6 col-12">
+      <h2>What is COVID - 19 (Corona-Virus)</h2>
+      <p>COVID - 19 is infectious disease caused by the most recently discovered coronavirus. This new Virus and disease were unknowu before the outbreak began in Wuhan, China, in December 2019.</p>
+      <P>Coronaviruses are a large family of Viruses which may cause illness in animals and Humans. In Humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus cause coronavirus disease COVID - 19. </p>
+    </div>
+  </div>
+</div> 
+
+<div class="text-center jumbotron" id="graphid">
+  <h1>COVID-19 cases in India (State wise) Chart</h1>
+  <p>Overall cases in India is displayed </p>
+</div>
+  
+<canvas id="myChart"></canvas>
+
+<div class="text-center jumbotron">
+  <h1>COVID-19 Tamil Nadu District wise Chart</h1>
+  <p>Overall cases in Tamil Nadu is displayed </p>
+</div>
+
+<canvas id="tnGraph"></canvas>
+
+<div class="jumbotron text-center">
+  <h1>Tamil Nadu Daily Updates Chart</h1>
+</div>
+
+<canvas id="tnDailyGraph"></canvas>
+
+<div class="container-fluid sub_section pt-5 pb-1" id="symptomsid">
+    <div class="section_header text-center mb-5 mt-4">
+      <h1>Coronavirus Symptoms</h1>
+    </div> 
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+          <figure class="text-center">
+            <img src="/images/p5.png" alt="No" class="img-fluid" width="100" height="100">
+          </figure>
+          <figcaption class="text-center">Cough</figcaption>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+          <figure class="text-center">
+            <img src="/images/p6.png" alt="No" class="img-fluid" width="100" height="100">
+          </figure>
+          <figcaption class="text-center">Cold</figcaption>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+          <figure class="text-center">
+            <img src="/images/p7.png" alt="No" class="img-fluid" width="100" height="100">
+          </figure>
+          <figcaption class="text-center">Tiredness</figcaption>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+          <figure class="text-center">
+            <img src="/images/p8.png" alt="No" class="img-fluid" width="100" height="100">
+          </figure>
+          <figcaption class="text-center">Running nose</figcaption>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+          <figure class="text-center">
+            <img src="/images/p9.png" alt="No" class="img-fluid" width="100" height="100">
+          </figure>
+          <figcaption class="text-center">Fever</figcaption>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 mt-5">
+          <figure class="text-center">
+            <img src="/images/p10.png" alt="No" class="img-fluid" width="100" height="100">
+          </figure>
+          <figcaption class="text-center">Breating Problem</figcaption>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5 pb-1" id="preventid">
+  <div class="section_header text-center mb-5 mt-4">
+    <h1>6 Steps Prevention Against Coronavirus</h1>
+  </div> 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12 pt-5 pb-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure class="text-center">
+              <img src="/images/p11.png" alt="No" class="img-fluid" width="70" height="70">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+            <figcaption>Cover your Mouth and Nose with a Mask and when you sneeze or cough cover with elbow or disposable cloth</figcaption>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 pt-5 pb-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure class="text-center">
+              <img src="/images/p12.png" alt="No" class="img-fluid" width="70" height="70">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+            <figcaption>Wash your Hands regularly for 20 seconds with soap and water or alcohol-based hand sanitiser</figcaption>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 pt-5 pb-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure class="text-center">
+              <img src="/images/p13.png" alt="No" class="img-fluid" width="70" height="70">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+            <figcaption>Stay Home and Self-isolate with others in the household if you fell unwell</figcaption>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12 pt-5 pb-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure class="text-center">
+              <img src="/images/p14.png" alt="No" class="img-fluid" width="70" height="70">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+            <figcaption>Avoid close contact(1 meter or 3 feet) with people who are unwell</figcaption>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 pt-5 pb-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure class="text-center">
+              <img src="/images/p15.png" alt="No" class="img-fluid" width="70" height="70">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+            <figcaption>Avoid Group activities like festivals. If it is necessary make sure your are in 3 feet apart</figcaption>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 pt-5 pb-5">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-12">
+            <figure class="text-center">
+              <img src="/images/p16.png" alt="No" class="img-fluid" width="70" height="70">
+            </figure>
+          </div>
+          <div class="col-lg-8 col-md-8 col-12">
+            <figcaption>Stay Informed by watching news and follow the recomended Practice</figcaption>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid sub_section pt-5 pb-1" id="contactid">
+  <div class="section_header text-center mb-5 mt-4">
+    <h1>Contact Us As Soon As Possible</h1>
+  </div> 
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-12">
+        <form action="/" method="POST">
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username" placeholder="Name" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" name="email" placeholder="Email" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label>Mobile</label>
+            <input type="text" class="form-control" name="mobile" placeholder="mobile" required autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label>Select Symptoms</label> <br>
+            <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+              <input type="checkbox" class="custom-control-input" id="customcheckbox1" name="coronasym[]" value="cold">
+              <label for="customcheckbox1" class="custom-control-label">Cold</label>
+            </div>
+
+            <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+              <input type="checkbox" class="custom-control-input" id="customcheckbox2" name="coronasym[]" value="fever">
+              <label for="customcheckbox2" class="custom-control-label">Fever</label>
+            </div>
+
+            <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+              <input type="checkbox" class="custom-control-input" id="customcheckbox3" name="coronasym[]" value="weak">
+              <label for="customcheckbox3" class="custom-control-label">Feeling Weak</label>
+            </div>
+
+            <div class="custom-control custom-checkbox custom-control-inline text-capitalize">
+              <input type="checkbox" class="custom-control-input" id="customcheckbox4" name="coronasym[]" value="breath">
+              <label for="customcheckbox4" class="custom-control-label">Difficult in Breath</label>
+            </div>
+
+          <div class="form-group"> <br>
+            <label>Describe how you are feeling</label>
+            <textarea class="form-control" rows="3" name="description"></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%- include('partials/footer') %>
